@@ -1,12 +1,13 @@
-dimCalendario = 
+dCalendario = 
 
 ADDCOLUMNS(
-			CALENDAR(MIN(Tabela1[DT_EMISSAO]), MAX(Tabela1[DT_EMISSAO]))
+			CALENDAR(MIN(fFrete3[Data]), MAX(fFrete3[Data]))
 			, "Dia", FORMAT([Date],"dddd")
 			, "Dia da Semana",(WEEKDAY([Date],1))
 			, "Dia do Mês",DAY([Date])
 			, "Mês", FORMAT([Date],"MMMM")
 			, "Número do Mês", MONTH([Date])
+            , "Nome do mês abreviado", FORMAT( [Date], "mmm", "pt-BR" )
 			, "Mês do Ano", FORMAT([Date], "MMMM") & " de " & YEAR([Date])
 			, "Ordenador Mês e Ano", FORMAT([Date], "yyyymm")
 			, "Ano", YEAR([Date])
